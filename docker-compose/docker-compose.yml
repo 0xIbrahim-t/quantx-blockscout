@@ -45,10 +45,10 @@ services:
     links:
       - db:database
     environment:
-        ETHEREUM_JSONRPC_HTTP_URL: http://host.docker.internal:8545/
-        ETHEREUM_JSONRPC_TRACE_URL: http://host.docker.internal:8545/
-        ETHEREUM_JSONRPC_WS_URL: ws://host.docker.internal:8545/
-        CHAIN_ID: '1337'
+        ETHEREUM_JSONRPC_HTTP_URL: http://172.31.87.40:8545/
+        ETHEREUM_JSONRPC_TRACE_URL: http://172.31.87.40:8545/
+        ETHEREUM_JSONRPC_WS_URL: ws://172.31.87.40:8545/
+        CHAIN_ID: '1275'
 
   nft_media_handler:
     <<: *default-logging
@@ -125,3 +125,4 @@ services:
     extends:
       file: ./services/nginx.yml
       service: proxy
+      
